@@ -1,14 +1,21 @@
-<<<<<<< HEAD
-# SnapFilter Pro - Mini Photoshop Application
+# Mini Photoshop (SnapFilter Pro) 📷
 
-Aplikasi image editing profesional dengan 40+ fitur pemrosesan citra dan machine learning integration.
+A professional desktop-based digital image processing application built with Python featuring 40+ image processing features, real-time image enhancement, geometric transformations, edge detection, color space manipulation, and machine learning integration.
 
-## 🎯 Fitur Utama
+---
+
+## 📄 Project Documentation
+
+[mini-photoshop](./mini-photoshop.pdf)
+
+---
+
+## 🎯 Main Features
 
 ### 1. **Image Management** ✅
 - Load gambar (JPG, PNG, BMP, TIFF)
-- Save dengan quality control (0-100)
-- Reset ke original
+- Save with quality control (0-100)
+- Reset to original
 - Undo/Redo system (max 20 history states)
 
 ### 2. **Image Enhancement** ✅
@@ -19,12 +26,12 @@ Aplikasi image editing profesional dengan 40+ fitur pemrosesan citra dan machine
 - Bilateral Filter (edge-preserving blur)
 
 ### 3. **Geometric Transformation** ✅
-- Rotate (0°-360° dengan slider)
+- Rotate (0°-360° with slider)
 - Flip Horizontal/Vertical
 - Crop (interactive drag-select)
 - Resize (scale factor)
 - Translation (offset X/Y dengan slider)
-- Affine transformations dengan interpolasi
+- Affine transformations with interpolasi
 
 ### 4. **Image Restoration** ✅
 - Gaussian Blur
@@ -65,7 +72,7 @@ Aplikasi image editing profesional dengan 40+ fitur pemrosesan citra dan machine
 - Region extraction
 
 ### 8. **Image Compression** ✅
-- Save dengan quality levels (10-100)
+- Save with quality levels (10-100)
 - Format support (JPG, PNG, BMP)
 - RLE compression simulation
 - Compression ratio calculation
@@ -78,15 +85,15 @@ Aplikasi image editing profesional dengan 40+ fitur pemrosesan citra dan machine
 
 ### 10. **User Interface** ✅
 - Menu bar (File, Edit, Filter, Transform, Analysis)
-- Scrollable sidebar dengan 30+ filter buttons
+- Scrollable sidebar with 30+ filter buttons
 - Real-time preview
-- Slider controls untuk parameter tuning
-- Status bar untuk feedback
+- Slider controls for parameter tuning
+- Status bar for feedback
 - Dark mode (CustomTkinter)
 
 ### 11. **Machine Learning (Bonus)** ✅
-- Face Detection menggunakan Haar Cascades
-- Real-time detection dengan bounding boxes
+- Face Detection with Haar Cascades
+- Real-time detection with bounding boxes
 - Confidence visualization
 
 ## 📋 Requirements
@@ -117,7 +124,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Atau install manually jika ada masalah:
+Or install manually if there are any problems:
 ```bash
 pip install customtkinter opencv-python pillow numpy matplotlib scikit-learn scipy
 ```
@@ -161,12 +168,12 @@ miniPhotoshop/
 
 ### Histogram Analysis
 - Click "Show Histogram" button
-- Opens matplotlib window dengan histogram
+- Opens matplotlib window with the histogram
 - Display RGB channels atau grayscale
 
 ### Face Detection
 - Click "🤖 Face Detection"
-- Automatically detects faces dan draws bounding boxes
+- Automatically detects faces and draws bounding boxes
 - Shows count di status bar
 
 ## 🔧 Technical Details
@@ -186,15 +193,15 @@ miniPhotoshop/
 - **Analysis**: Histogram, statistics, metadata
 
 ### Affine Transformations
-- Uses `cv2.getRotationMatrix2D()` untuk rotation
-- `cv2.warpAffine()` untuk transformation application
-- Support untuk interpolation (nearest/linear)
+- Uses `cv2.getRotationMatrix2D()` for rotation
+- `cv2.warpAffine()` for transformation application
+- Support for interpolation (nearest/linear)
 
 ### Performance Optimizations
-- Direct NumPy operations untuk speed
-- Lazy loading dari image files
+- Direct NumPy operations for speed
+- Lazy loading from image files
 - Efficient memory management
-- Real-time preview tanpa lag
+- Real-time preview without lag
 
 ## 📊 Filter Reference
 
@@ -218,10 +225,10 @@ miniPhotoshop/
 
 1. **Real-time Adjustment**: Slider values apply instantly
 2. **Undo/Redo Workflow**: Work non-destructively
-3. **Quality Control**: Adjust quality sebelum save untuk file size
-4. **Channel Analysis**: Split channels untuk debug color problems
-5. **Histogram Matching**: Use untuk perbandingan before/after
-6. **Batch Operations**: Combine multiple filters untuk custom effects
+3. **Quality Control**: Adjust quality before save for file size
+4. **Channel Analysis**: Split channels for debug color problems
+5. **Histogram Matching**: Use for before/after comparisons
+6. **Batch Operations**: Combine multiple filters for custom effects
 
 ## ⚙️ Configuration
 
@@ -232,7 +239,7 @@ miniPhotoshop/
 - Default Quality: 95
 
 ### Customization
-Edit di `main.py`:
+Edit in `main.py`:
 ```python
 ctk.set_appearance_mode("dark")  # Change ke "light"
 ctk.set_default_color_theme("blue")  # Change theme
@@ -245,46 +252,44 @@ ctk.set_default_color_theme("blue")  # Change theme
 pip install --upgrade -r requirements.txt
 ```
 
-### GUI tidak muncul
+### GUI does not appear
 - Check Python version (3.8+)
 - Verify tkinter installed: `python -m tkinter`
 
-### Image tidak load
+### Image does not load
 - Check format (support JPG, PNG, BMP, TIFF)
 - Verify image path valid
 - Try smaller resolution
 
-### Filters terlalu lambat
+### Filters too slow
 - Reduce image resolution
 - Use lower quality setting
-- Disable live preview untuk real-time sliders
+- Disable live preview for real-time sliders
 
 ## 📚 Algorithm References
 
 ### Edge Detection
-- **Canny**: Multi-stage edge detection dengan hysteresis
+- **Canny**: Multi-stage edge detection with hysteresis
 - **Sobel**: Gradient-based using convolution kernels
 - **Prewitt**: Similar ke Sobel, different kernels
-- **Roberts**: 2x2 kernels untuk fast computation
-- **Laplacian**: 2nd derivative untuk edge enhancement
+- **Roberts**: 2x2 kernels for fast computation
+- **Laplacian**: 2nd derivative for edge enhancement
 - **LoG**: Laplacian after Gaussian blur
 
 ### Segmentation
-- **Threshold**: Biner classification berdasarkan intensity
+- **Threshold**: Binary classification based on intensity
 - **K-means**: Iterative clustering algorithm
-- **Watershed**: Topological approach untuk region labeling
+- **Watershed**: Topological approach for region labeling
 
 ### Morphology
-- **Erosion**: Removes white regions (dengan structuring element)
+- **Erosion**: Removes white regions (with structuring element)
 - **Dilation**: Expands white regions
 - **Opening**: Erosion then dilation (remove noise)
 - **Closing**: Dilation then erosion (fill holes)
 
 ## 📝 License & Credits
 
-**Diadaptasi untuk PCD 2026 Assignment**
-
-Menggunakan libraries:
+Built with libraries:
 - OpenCV (cv2) - Computer Vision
 - Pillow - Image processing
 - NumPy - Numerical computing
@@ -295,52 +300,9 @@ Menggunakan libraries:
 ## 📧 Support
 
 For issues, questions, atau suggestions:
-1. Check README dan Filter Reference
-2. Verify Python version dan dependencies
-3. Test dengan sample image
-4. Check console output untuk error messages
+1. Check README and Filter Reference
+2. Verify Python version and dependencies
+3. Test with sample image
+4. Check console output for error messages
 
----
 
-**SnapFilter Pro v1.0** - Built for Image Processing Course 2026
-=======
-# Mini Photoshop (SnapFilter Pro) 📷
-
-A desktop-based digital image processing application built with Python, featuring real-time image enhancement, geometric transformations, edge detection, color space manipulation, and AI-powered object detection.
-
----
-
-## 📄 Project Documentation
-
-[mini-photoshop](./mini-photoshop.pdf)
-
----
-
-## 🚀 Key Features
-
-* **File Management & Preview:** Load standard image formats (`.jpg`, `.png`, `.bmp`) with side-by-side comparison for **Original** and **Processed** workspaces.
-* **Basic Adjustments & Filters:** Real-time controls for Brightness, Contrast, Truncation, Grayscale, and Sharpening.
-* **Interactive Transformations & Crop:** Dynamic image resizing, rotation, translation, affine shearing, and an **Interactive Crop** feature directly on the canvas.
-* **Noise Reduction & Edge Detection:** Built-in filters including Median Filter, Noise Removal, Canny, Roberts, Prewitt, Sobel, Laplacian of Gaussian (LoG), and Thresholding.
-* **Color Processing & Segmentation:** Color space splitting (RGB/HSV), threshold adjustments, K-Means clustering, and edge-based segmentation.
-* **AI Object Detection:** Integrated Convolutional Neural Network (YOLOv3-tiny via `cvlib`) to automatically detect and draw bounding boxes around specific objects (such as "person").
-* **History Management:** Fully supported Undo, Redo, and Reset operations using a memory stack approach.
-
----
-
-## 🛠️ Tech Stack & Libraries
-
-* **GUI Framework:** CustomTkinter (CTK) & Native Tkinter Canvas
-* **Core Logic / Image Processing:** Python 3, OpenCV (`cv2`), NumPy
-* **AI & Deep Learning:** `cvlib` with OpenCV DNN Backend
-* **Data Visualization:** Matplotlib (integrated for real-time color histograms)
-
----
-
-## 📋 System Requirements
-
-* **Operating System:** Windows, macOS, or Linux
-* **Python Version:** Python 3.10 or higher
-* **RAM:** Minimum 4 GB (recommended for undo/redo stack memory management)
-
->>>>>>> 0f82978d557ace535beff4d74f745f059b069c1f
