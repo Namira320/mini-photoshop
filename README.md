@@ -4,6 +4,11 @@ A professional desktop-based digital image processing application built with Pyt
 
 ---
 
+## 📺 Demo Video
+[![Watch the video](https://img.youtube.com/vi/mBY7YgPAT2c/hqdefault.jpg)](https://youtu.be/mBY7YgPAT2c)
+
+---
+
 ## 📄 Project Documentation
 
 [mini-photoshop](./mini-photoshop.pdf)
