@@ -4,6 +4,12 @@ A desktop-based digital image processing application built with Python, featurin
 
 ---
 
+## 📄 Project Documentation
+
+[mini-photoshop](./mini-photoshop.pdf)
+
+---
+
 ## 🚀 Key Features
 
 * **File Management & Preview:** Load standard image formats (`.jpg`, `.png`, `.bmp`) with side-by-side comparison for **Original** and **Processed** workspaces.
