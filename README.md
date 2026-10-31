@@ -30,7 +30,7 @@ A professional desktop-based digital image processing application built with Pyt
 - Flip Horizontal/Vertical
 - Crop (interactive drag-select)
 - Resize (scale factor)
-- Translation (offset X/Y dengan slider)
+- Translation (offset X/Y with slider)
 - Affine transformations with interpolation
 
 ### 4. **Image Restoration** ✅
@@ -299,7 +299,7 @@ Built with libraries:
 
 ## 📧 Support
 
-For issues, questions, atau suggestions:
+For issues, questions, or suggestions:
 1. Check README and Filter Reference
 2. Verify Python version and dependencies
 3. Test with sample image
