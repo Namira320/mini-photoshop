@@ -13,7 +13,7 @@ A professional desktop-based digital image processing application built with Pyt
 ## 🎯 Main Features
 
 ### 1. **Image Management** ✅
-- Load gambar (JPG, PNG, BMP, TIFF)
+- Load image (JPG, PNG, BMP, TIFF)
 - Save with quality control (0-100)
 - Reset to original
 - Undo/Redo system (max 20 history states)
@@ -31,7 +31,7 @@ A professional desktop-based digital image processing application built with Pyt
 - Crop (interactive drag-select)
 - Resize (scale factor)
 - Translation (offset X/Y dengan slider)
-- Affine transformations with interpolasi
+- Affine transformations with interpolation
 
 ### 4. **Image Restoration** ✅
 - Gaussian Blur
@@ -169,19 +169,19 @@ miniPhotoshop/
 ### Histogram Analysis
 - Click "Show Histogram" button
 - Opens matplotlib window with the histogram
-- Display RGB channels atau grayscale
+- Display RGB channels or grayscale
 
 ### Face Detection
 - Click "🤖 Face Detection"
 - Automatically detects faces and draws bounding boxes
-- Shows count di status bar
+- Shows count in the status bar
 
 ## 🔧 Technical Details
 
 ### Image Processing Pipeline
 1. **Original Master Copy**: `cv_img_original` (read-only reference)
 2. **Working Copy**: `cv_img_processed` (editable working image)
-3. **History Stack**: Maintains last 20 states untuk undo/redo
+3. **History Stack**: Maintains last 20 states for undo/redo
 
 ### Filter Categories
 - **Enhancement**: Brightness, contrast, histogram, sharpening
@@ -218,7 +218,7 @@ miniPhotoshop/
 - Translate Y: -200 to +200 pixels
 
 ### Compression
-- Quality: 10 to 100 (untuk JPEG)
+- Quality: 10 to 100 (for JPEG)
 - PNG compression: auto-calculated
 
 ## 🎯 Tips & Tricks
@@ -241,7 +241,7 @@ miniPhotoshop/
 ### Customization
 Edit in `main.py`:
 ```python
-ctk.set_appearance_mode("dark")  # Change ke "light"
+ctk.set_appearance_mode("dark")  # Change to "light"
 ctk.set_default_color_theme("blue")  # Change theme
 ```
 
@@ -271,7 +271,7 @@ pip install --upgrade -r requirements.txt
 ### Edge Detection
 - **Canny**: Multi-stage edge detection with hysteresis
 - **Sobel**: Gradient-based using convolution kernels
-- **Prewitt**: Similar ke Sobel, different kernels
+- **Prewitt**: Similar to Sobel, different kernels
 - **Roberts**: 2x2 kernels for fast computation
 - **Laplacian**: 2nd derivative for edge enhancement
 - **LoG**: Laplacian after Gaussian blur
